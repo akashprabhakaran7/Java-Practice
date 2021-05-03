@@ -68,7 +68,7 @@ public class Test {
 		WebElement txtCustomerName = driver
 				.findElement(By.xpath("(//*[contains(@class, 'info-table-two')]//td[2])[6]"));
 
-		 
+	//c
 		
 		 WebElement legalStatement = driver.findElement(By.xpath("//table//p//a[contains(., 'Legal Statement')]"));
 			WebElement PrivacyPolicy = driver.findElement(By.xpath("//table//p//a[contains(., 'Privacy Policy')]"));
@@ -79,11 +79,11 @@ public class Test {
 
 		WebElement Errorslbl = driver.findElement(By.xpath("//table[contains(@class, 'content-table')]//h2"));
 
-		String errortxt = Errorslbl.getText();
-		System.out.println(errortxt);
-		String numberOnly = errortxt.replaceAll("[^0-9]", "");
-		System.out.println(numberOnly);
-		int countoferrors = Integer.parseInt(numberOnly);
+		//String errortxt = Errorslbl.getText();
+		//System.out.println(errortxt);
+		//String numberOnly = errortxt.replaceAll("[^0-9]", "");
+		//System.out.println(numberOnly);
+		int countoferrors = Integer.parseInt(Errorslbl.getText().replaceAll("[^0-9]", ""));
 		System.out.println(countoferrors);
 
 		if (countoferrors < 50)
